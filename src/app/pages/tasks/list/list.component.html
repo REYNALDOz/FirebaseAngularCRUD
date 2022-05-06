@@ -1,0 +1,50 @@
+<div class="container">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- title Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> title </th>
+    <td mat-cell *matCellDef="let element "> {{element.title}} </td>
+  </ng-container>
+
+ <!-- description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef> description </th>
+    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <!-- owner Column -->
+  <ng-container matColumnDef="owner">
+    <th mat-header-cell *matHeaderCellDef> owner </th>
+    <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
+  </ng-container>
+
+  <!-- startDate Column -->
+  <ng-container matColumnDef="startDate">
+    <th mat-header-cell *matHeaderCellDef> startDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+  </ng-container>
+    <!-- finishDate Column -->
+  <ng-container matColumnDef="finishDate">
+    <th mat-header-cell *matHeaderCellDef> finishDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.finishDate}} </td>
+  </ng-container>
+ 
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button color="accent" class="btn"><span class="spa" (click)="onGoToEdit(element)">Edit</span></button>
+        <button mat-raised-button color="primary" class="btn"><span class="spa" (click)="onGoToSee(element)" >See</span></button>
+        <button mat-raised-button color="warn" class="btn"><span class="spa" (click)="onGoToDelete(element.id)" >Delete</span></button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>

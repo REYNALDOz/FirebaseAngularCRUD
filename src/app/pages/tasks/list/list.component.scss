@@ -1,0 +1,59 @@
+table {
+  width: 100%;
+}
+
+.container {
+  margin: 60px 100px;
+}
+.btn {
+  text-align: right;
+  margin: 2px;
+}
+
+th {
+  width: 12px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .container {
+    margin: 60px 30px;
+    font-size: calc(1rem + 1vw);
+  }
+  th {
+    width: 0.8em;
+    padding: 0;
+  }
+  .btn {
+    height: 30px;
+    text-align: center;
+    display: inline-flex;
+    width: 1px;
+  }
+  .spa {
+    vertical-align: text-bottom;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  table {
+    width: 100%;
+  }
+
+  .container {
+    margin: 60px 30px;
+  }
+  th {
+    width: 0.8em;
+    padding: 0;
+  }
+  .btn {
+    height: 30px;
+    text-align: center;
+    display: inline-flex;
+    width: 1px;
+  }
+  .spa {
+    vertical-align: text-bottom;
+  }
+}

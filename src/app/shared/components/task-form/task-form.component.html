@@ -1,0 +1,47 @@
+<form (ngSubmit)="onSave()" [formGroup]="taskForm">
+  <div class="contenedor">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Title </mat-label>
+            <input matInput formControlName="title" />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Owner</mat-label>
+            <input matInput formControlName="owner"/>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Esta tarea consiste en ..." formControlName="description"></textarea
+        >
+      </mat-form-field>
+    </p>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Start Task </mat-label>
+            <input matInput formControlName="startDate"/>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Finish Task</mat-label>
+            <input matInput formControlName="finishDate"/>
+          </mat-form-field>
+          
+        </td>
+      </tr>
+    </table>
+    <button mat-raised-button color="accent" type="submit" >Save</button>
+
+   <button mmat-stroked-button color="primary" class="goBack" (click)="onGoToBackList()">Go List</button>
+  </div>
+</form>
