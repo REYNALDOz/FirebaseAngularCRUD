@@ -38,8 +38,6 @@ export class DetailsComponent implements OnInit {
     this.router.navigate(['list']);
   }
 
- 
-
   async onGoToDelete(): Promise<void> {
     try {
       await this.tasksSVC.onDeleteTask(this.task?.id);
